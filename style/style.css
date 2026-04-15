@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+
+.nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    position: relative;
+    width: 80px;
+    padding: 4px;
+    padding-top: 10px;
+    height: 100vh;
+    z-index: 1000;
+    transition: background 0.3s ease;
+    background: #141414;
+    border-right: 1px solid var(--border-color);
+
+}
+
+header.scrolled {
+    background: var(--bg-color);
+}
+
+.nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav img {
+    height: 40px; 
+    width: 40px;
+    transition: transform 0.3s ease;
+    fill: #fff;
+}
+
+.nav img:hover, .nav-links a:hover{
+    transform: scale(1.05);
+    opacity: 100%;
+}
+
+.nav-links {
+    position: fixed;
+    bottom: 5px;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-links a {
+    opacity: 50%;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+
+main {
+    width: 100%;
+    background: var(--bg-color);
+    font-family: "Departure Mono";
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+
+.main-container {
+    padding: 100px;
+    color: white;
+    width: 800px;
+    
+}
+
+form {
+    border: 0;
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    
+}
+
+form input {
+    position: relative;
+    font-family: monospace;
+    font-weight: bold;
+    text-indent: 30px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid var(--border-color);
+    background: var(--input-color);
+    box-shadow: -2px 2px 20px rgb(58, 58, 58);
+    height: 38px;
+    outline: none;
+    width: 86%;
+}
+
+form input:focus-visible {
+    border: white 2px solid;
+}
+
+
+form button {
+    font-family: "Departure Mono";
+    cursor:pointer;
+    z-index: 2;
+    padding: 2px;
+    border-radius: 5px;
+    border: none;
+    height: 38px;
+    background: #ffffff;
+    flex: 1 1 auto;
+    transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95); 
+}
+
+form button:hover {
+    transform: scale(0.95);
+}
+
+form button:active {
+    transform: scale(0.9);
+}
+
+form h3 {
+    filter: grayscale(1);
+    position: absolute;
+    left: 5px;
+    color: var(--border-color);
+    bottom: 7px;
+    z-index: 100;
+}
+
+form h3:focus {
+    color: white;
+}
+.description p {
+    font-size: 14px;
+    color: #ffffff80;
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.description img {
+    user-select: none;
+    pointer-events: none;
+    top: -150px;
+    width: 120px;
+}
+
+.shadow {
+    pointer-events: none;
+    user-select: none;
+    border: 2px solid #383838;
+    position: absolute;
+    height: 50px;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: inset 10px 0 15px -5px black, inset -10px 0 15px -5px black;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Скрываем меню на мобильных */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #141414;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        display: flex; /* Показываем по клику на бургер */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* Добавь бургер-иконку в HTML: <div class="burger">☰</div> */
+    .burger {
+        display: block;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

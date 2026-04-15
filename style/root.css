@@ -1,0 +1,12 @@
+:root{
+    --bg-color: #000;
+    --border-color: #575656;
+    --input-color: #000;
+}
+
+@font-face {
+    font-family: 'Departure Mono';
+    src: url('../res/fonts/DepartureMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
