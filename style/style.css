@@ -132,14 +132,19 @@ form button {
     height: 38px;
     background: #ffffff;
     flex: 1 1 auto;
-    transition: all 0.1s cubic-bezier(0.445, 0.05, 0.55, 0.95); 
+    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); 
 }
 
 form button:hover {
+    box-shadow: 0 2px 0px  #181818;
     transform: scale(0.95);
 }
 
 form button:active {
+    background: var(--success-color);
+    box-shadow: 0 5px 0px  #013f0a;
+    color: var(--success-text-color);
+    text-shadow: 0 0 10px var(--success-text-color);
     transform: scale(0.9);
 }
 
