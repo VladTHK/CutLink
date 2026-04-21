@@ -111,7 +111,7 @@ form input {
     color: white;
     border: 2px solid var(--border-color);
     background: var(--input-color);
-    box-shadow: -2px 2px 20px rgb(58, 58, 58);
+    box-shadow: -2px 2px 20px rgba(255, 255, 255, 0.116);
     height: 38px;
     outline: none;
     width: 86%;
@@ -142,11 +142,11 @@ form button:hover {
 
 form button:active {
     background: var(--success-color);
-    box-shadow: 0 5px 0px  #013f0a;
     color: var(--success-text-color);
     text-shadow: 0 0 10px var(--success-text-color);
     transform: scale(0.9);
 }
+
 
 form h3 {
     filter: grayscale(1);
@@ -190,6 +190,34 @@ form h3:focus {
     border-radius: 5px;
     width: 80%;
     box-shadow: inset 10px 0 15px -5px black, inset -10px 0 15px -5px black;
+}
+
+.result-box {
+    top: 0;
+    right: 0;
+
+    position: absolute;
+    width: max-content;
+    height: 50px;
+}
+
+.result {
+    position: relative;
+    padding: 5px 5px 5px 30px;
+    margin: 10px;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+    background: var(--input-color);
+}
+
+.result::before {
+    content: "✔";
+    position: absolute;
+    left: 5px;
+    bottom: 3px;
+    font-size: 17px;
 }
 
 @media (max-width: 768px) {

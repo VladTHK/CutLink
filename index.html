@@ -29,13 +29,28 @@
                 <img src="./res/img/logo_cutlink.png" alt="">
                 <p>Помогите клиентам мгновенно находить вашу страницу онлайн. Короткие ссылки избавляют от длинных URL, экономя место и повышая кликабельность в соцсетях и email-рассылках.</p>
             </div><br>
-            <form action="" class="form-input">
+            <form action="" class="form-input" novalidate data-js-form>
                 <h3>📎</h3>
-                <input id="link-area" spellcheck="false" autocomplete="off" autocapitalize="none" maxlength="512" data-form-type="other" class="svelte-1xipo2g" placeholder="вставь ссылку сюда" aria-label="поле ввода ссылки">
-                <button>✂ link</button>
+                <input 
+                class="field_control"
+                id="link-area"
+                placeholder="вставь ссылку сюда"
+                aria-label="поле ввода ссылки"
+                required
+                aria-errormessage="link-area-error"
+                />
+                <span id="link-area-error" class="field_errors" data-js-form-field-errors></span>
+                <button id="copyBtn" type="submit">✂ link</button>
+                
             </form>
+        </div>
+
+        <div class="result-box" id="resultBox" style="display: none;">
+            <div class="result" id="result"></div>
         </div>
     </main>
     <footer></footer>
 </body>
+
+    <script src="./scripts/script.js"></script>
 </html>
