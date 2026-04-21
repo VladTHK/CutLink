@@ -220,9 +220,19 @@ form h3:focus {
     font-size: 17px;
 }
 
+#copyStatus {
+    color: var(--success-text-color);
+    position: absolute;
+    font-size: 10px;
+    right: -10px;
+    top: -20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Скрываем меню на мобильных */
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -233,21 +243,10 @@ form h3:focus {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
-    .nav-links.active {
-        display: flex; /* Показываем по клику на бургер */
-    }
-
     .nav-links ul {
         flex-direction: column;
         gap: 10px;
         width: 100%;
     }
 
-    /* Добавь бургер-иконку в HTML: <div class="burger">☰</div> */
-    .burger {
-        display: block;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-    }
 }

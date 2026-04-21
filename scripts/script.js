@@ -35,20 +35,18 @@ form.addEventListener("submit", async function (event) {
 
 
 function copyToClipboard(text) {
+    if (!text) return;
+
     navigator.clipboard.writeText(text);
 
-    copyStatus.textContent = "Скопировано ✅";
+    copyStatus.textContent = "Скопировано ✔";
+    copyStatus.style.opacity = "1";
 
     setTimeout(() => {
-        copyStatus.textContent = "";
-    }, 2000);
+        copyStatus.style.opacity = "0";
+    }, 3000);
 }
-
 
 copyBtn.addEventListener("click", function () {
     copyToClipboard(result.textContent);
-});
-
-result.addEventListener("click", function () {
-    copyToClipboard(result.textContent);
-});
+})
