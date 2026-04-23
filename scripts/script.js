@@ -4,6 +4,9 @@ const resultBox = document.getElementById("resultBox");
 const result = document.getElementById("result");
 const copyBtn = document.getElementById("copyBtn");
 const copyStatus = document.getElementById("copyStatus");
+const supportService = document.getElementById("supportService");
+const supportList = document.getElementById("supportList");
+const supportIcon = document.querySelector(".supportIcon");
 
 
 form.addEventListener("submit", async function (event) {
@@ -50,3 +53,29 @@ function copyToClipboard(text) {
 copyBtn.addEventListener("click", function () {
     copyToClipboard(result.textContent);
 })
+
+
+supportService.addEventListener("click", () => {
+    const isOpen = supportService.classList.contains("active");
+
+    if (!isOpen) {
+
+        supportService.classList.add("active");
+        supportIcon.classList.add("rotate");
+
+        setTimeout(() => {
+            supportList.classList.add("active");
+        }, 300);
+
+    } else {
+
+        supportList.classList.remove("active");
+        supportList.classList.add("closing");
+
+        setTimeout(() => {
+            supportService.classList.remove("active");
+            supportIcon.classList.remove("rotate");
+            supportList.classList.remove("closing");
+        }, 300);
+    }
+});
