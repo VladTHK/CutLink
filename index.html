@@ -12,15 +12,17 @@
     <header>
         <div class="nav">
             <div class="nav-logo">
-                <a href="#"><img src="./res/img/logo_cutlink.png" alt=""></a>
+                <a href="#"><img src="./res/img/logo_cutlink.png" alt="logo"></a>
             </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href=""><img src="./res/img/cog.svg" alt=""></a></li>
-                    <li><a href="https://t.me/Vlad_THK"><img src="./res/img/telegram.svg" alt="telegram"></a></li>
-                    <li><a href="https://thk.c6t.ru"><img src="./res/img/Interface-Essential-Global-Public--Streamline-Pixel.svg" alt="developer site"></a></li>
+                    <li id="settings"><a title="Настройки" href=""><img src="./res/img/cog.svg" alt=""></a></li>
+                    <li><a title="Телеграм" href="https://t.me/Vlad_THK"><img src="./res/img/telegram.svg" alt="telegram"></a></li>
+                    <li><a title="Владелец" href="https://thk.c6t.ru"><img src="./res/img/Interface-Essential-Global-Public--Streamline-Pixel.svg" alt="developer site"></a></li>
                 </ul>
             </div>
+        </div>
+        <div class="settings-menu">
         </div>
     </header>
     <main>
@@ -50,8 +52,9 @@
                 <p>Помогите клиентам мгновенно находить вашу страницу онлайн. Короткие ссылки избавляют от длинных URL, экономя место и повышая кликабельность в соцсетях и email-рассылках.</p>
             </div><br>
             <form action="" class="form-input" novalidate data-js-form>
-                <h3>📎</h3>
+                <img src="./res/img/link.png" alt="link">
                 <input 
+                type="url"
                 class="field_control"
                 id="link-area"
                 placeholder="вставь ссылку сюда"
@@ -67,6 +70,12 @@
 
         <div class="result-box" id="resultBox" style="display: none;">
             <div class="result" id="result"></div>
+        </div>
+
+        <div class="terms-note">
+            <span title="67">тыкаешь — значит согласен с 
+                <a  href="">этими буквами и цифрами</a>
+              </span>
         </div>
     </main>
     <footer></footer>

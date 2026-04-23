@@ -18,7 +18,8 @@ body {
     align-items: center;
 }
 
-header {
+    header {
+    font-family: "Departure Mono";
     position: relative;
     width: 80px;
     padding: 4px;
@@ -26,8 +27,8 @@ header {
     height: 100vh;
     z-index: 1000;
     transition: background 0.3s ease;
-    background: #141414;
-    border-right: 1px solid var(--border-color);
+    background: #101010;
+    border-right: 1px solid #181818;
 
 }
 
@@ -45,8 +46,8 @@ header.scrolled {
 
 
 .nav img {
-    height: 40px; 
-    width: 40px;
+    height: 30px; 
+    width: 30px;
     transition: transform 0.3s ease;
     fill: #fff;
 }
@@ -56,19 +57,29 @@ header.scrolled {
     opacity: 100%;
 }
 
+.nav-links a::after {
+    bottom: -5px;
+    left: 5px;
+    font-size: 10px;
+    position: absolute;
+    content: attr(title);
+    color: white;
+}
+
 .nav-links {
     position: fixed;
     bottom: 5px;
 }
 
-.nav-links ul {
+.nav-links li {
     list-style: none;
     margin: 0;
-    padding: 0;
-    gap: 20px;
+    padding-bottom: 20px;
+    gap: 30px;
 }
 
 .nav-links a {
+    position: relative;
     opacity: 50%;
     text-decoration: none;
     padding: 8px 16px;
@@ -79,6 +90,7 @@ header.scrolled {
 
 main {
     width: 100%;
+    position: relative;
     background: var(--bg-color);
     font-family: "Departure Mono";
     display: grid;
@@ -257,17 +269,17 @@ form button:active {
 }
 
 
-form h3 {
-    filter: grayscale(1);
+form img {
+    width: 22px;
+    filter: brightness(0.5) ;
     position: absolute;
     left: 5px;
-    color: var(--border-color);
     bottom: 7px;
     z-index: 100;
 }
 
-form h3:focus {
-    color: white;
+form:focus-within img {
+    filter: brightness(1);
 }
 .description p {
     font-size: 14px;
@@ -288,6 +300,17 @@ form h3:focus {
     pointer-events: none;
     top: -150px;
     width: 120px;
+}
+
+.terms-note {
+    position: absolute;
+    bottom: 16px;
+}
+
+.terms-note, .terms-note a {
+    width: max-content;
+    font-size: 11px;
+    color: #383838;
 }
 
 .shadow {
