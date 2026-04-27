@@ -367,6 +367,7 @@ form:focus-within img {
 @media (max-width: 768px) {
 
     body {
+        background: var(--bg-color);
         overflow-x: hidden;
     }
 
