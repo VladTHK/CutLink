@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 
-    header {
+header {
     font-family: "Departure Mono";
     position: relative;
     width: 80px;
@@ -99,6 +99,7 @@ main {
 }
 
 .support-service {
+    cursor: pointer;
     z-index: 11;
     display: flex;
     justify-content: center ;
@@ -364,22 +365,72 @@ form:focus-within img {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #141414;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+    body {
+        overflow-x: hidden;
     }
 
-    .nav-links ul {
-        flex-direction: column;
-        gap: 10px;
+    .main-container {
+        padding: 40px 20px;
         width: 100%;
+        max-width: 800px;
     }
+    form {
+        display: flex;
+        width: 100%;
+        gap: 5px;
+    }
+    
+    form input {
+        flex: 1;
+        min-width: 0;
+        height: 40px;
+    }
+    
+    form button {
+        flex: 0 0 auto;
+        height: 40px;
+    }
+
+
+    header {
+        display: none;
+    }
+
+
+    .description img {
+        width: 80px;
+        top: -80px;
+    }
+
+    .result-box {
+        z-index: 1000;
+        top: 75px;
+    }
+
+    .result {
+        box-shadow: 0 0 5px 2px black;
+    }
+
+    .mobile-nav {
+        position: absolute;
+        bottom: 70px;
+    }
+
+    .mobile-nav-links ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+    }
+
+    .mobile-nav-links li img {
+        opacity: 50%;
+        width: 60px !important;
+        background: #505050;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
 
 }
