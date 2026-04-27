@@ -364,6 +364,10 @@ form:focus-within img {
     transition: opacity 0.4s ease;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 @media (max-width: 768px) {
 
     body {
@@ -414,6 +418,7 @@ form:focus-within img {
     }
 
     .mobile-nav {
+        display: block;
         position: absolute;
         bottom: 70px;
     }
