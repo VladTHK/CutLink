@@ -1,0 +1,159 @@
+.supportContainer {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+}
+
+.supportService {
+    width: 220px;
+    cursor: pointer;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    padding: 5px 10px 5px 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Departure Mono";
+    border: none;
+    background: transparent;
+    color: #ffffff80;
+    transition:
+        width 0.3s ease,
+        border-radius 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.supportService:hover {
+    color: #ffffff;
+    background: #181818;
+}
+
+.supportService.active {
+    background: #181818;
+    width: 300px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.supportIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: #222222;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+    transform: rotate(45deg);
+}
+
+.supportIcon.rotate {
+    transform: rotate(0deg);
+}
+
+.supportList {
+    z-index: 10;
+    border-radius: 20px;
+    padding: 14px;
+    background: #181818;
+    width: 300px;
+    font-size: 12px;
+    position: absolute;
+    top: 44px;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    transform-origin: top;
+    opacity: 0;
+
+    transition:
+        transform 0.3s ease 0.3s,
+        opacity 0.2s ease 0.3s;
+}
+
+.supportTitle {
+    color: #6b6b6b;
+    margin: 0;
+}
+
+.supportDescription {
+    color: #6b6b6b;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.supportList.active {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.supportList.closing {
+    transform: translateX(-50%) scaleY(0);
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.supportList ul {
+    list-style-type: none;
+    gap: 6px;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.supportList li {
+    border-radius: 5px;
+    background-color: #383838;
+    box-shadow: 0 0 5px 1px rgb(14, 14, 14);
+    padding: 4px 8px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.2s ease;
+}
+
+.supportList.active li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.supportList.active li:nth-child(2) {
+    transition-delay: 0.05s;
+}
+
+.supportList.active li:nth-child(3) {
+    transition-delay: 0.1s;
+}
+
+.supportList.active li:nth-child(4) {
+    transition-delay: 0.15s;
+}
+
+.supportList.closing li {
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+.supportList a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.supportList a:hover {
+    opacity: 0.8;
+}

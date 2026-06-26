@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 80px;
+    padding: 4px;
+    padding-top: 10px;
+    height: 100vh;
+    z-index: 1000;
+    transition: background 0.3s ease;
+    background: #101010;
+    border-right: 1px solid #181818;
+}
+
+.header img {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.logo img {
+    opacity: 1;
+}

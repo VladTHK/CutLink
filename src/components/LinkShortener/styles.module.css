@@ -1,0 +1,127 @@
+.linkShortener_container {
+    width: 600px;
+    padding: 24px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.linkShortener_form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.linkShortener_input {
+    position: relative;
+    font-family: monospace;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid var(--border-color);
+    background: var(--input-color);
+    box-shadow: -2px 2px 20px rgba(255, 255, 255, 0.116);
+    height: 42px;
+    outline: none;
+    width: 100%;
+    padding: 0 12px 0 40px;
+}
+
+.linkShortener_input:focus-visible {
+    border: white 2px solid;
+}
+
+.linkShortener_button {
+    font-family: "Departure Mono";
+    cursor: pointer;
+    z-index: 2;
+    padding: 2px 12px;
+    border-radius: 5px;
+    border: none;
+    height: 42px;
+    background: #ffffff;
+    flex: 0 0 auto;
+    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    white-space: nowrap;
+}
+
+.linkShortener_button:hover {
+    box-shadow: 0 2px 0px #181818;
+    transform: scale(0.95);
+}
+
+.linkShortener_button:active {
+    background: var(--success-color);
+    color: var(--success-text-color);
+    text-shadow: 0 0 10px var(--success-text-color);
+    transform: scale(0.9);
+}
+
+.linkShortener_icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: brightness(0.5);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.linkShortener_form:focus-within .linkShortener_icon {
+    filter: brightness(1);
+}
+
+.description {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+.description img {
+    user-select: none;
+    pointer-events: none;
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+.description p {
+    font-size: 13px;
+    color: #ffffff80;
+    line-height: 1.5;
+    max-width: 640px;
+    margin: 0;
+}
+
+.resultBox {
+    margin-top: 8px;
+    width: 100%;
+}
+
+.result {
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 2px solid var(--success-color);
+    background: var(--success-color);
+    color: var(--success-text-color);
+    width: fit-content;
+    max-width: 100%;
+}
+
+.terms-note {
+    position: absolute;
+    bottom: 16px;
+}
