@@ -36,7 +36,7 @@ const SupportService = () => {
                 className={`${styles.supportService} ${isActive ? styles.active : ''}`}
                 onClick={handleClick}
             >
-                <span className={`${styles.supportIcon} ${isActive ? styles.rotate : ''}`}>⨉</span>
+                <span className={`${styles.supportIcon} ${isActive ? styles.rotate : ''}`}>×</span>
                 Поддерживаемые ссылки
             </button>
 

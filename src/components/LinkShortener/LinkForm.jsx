@@ -2,7 +2,7 @@ import { useState } from 'react';
 import linkIcon from "../../assets/img/link.png";
 import styles from './styles.module.css';
 
-const LinkForm = ({ onShorten }) => {
+const LinkForm = ({ onShorten, loading }) => {
     const [url, setUrl] = useState('');
 
     const handleSubmit = (e) => {
@@ -27,11 +27,12 @@ const LinkForm = ({ onShorten }) => {
                 placeholder="вставь ссылку сюда"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
+                disabled={loading}
                 required
             />
 
-            <button type="submit" className={styles.linkShortener_button}>
-                Cut link
+            <button type="submit" className={styles.linkShortener_button} disabled={loading}>
+                {loading ? 'Сокращаю...' : 'Cut link'}
             </button>
         </form>
     );
