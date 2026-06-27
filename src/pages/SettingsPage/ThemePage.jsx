@@ -2,7 +2,7 @@ import SettingsNavigation from "../../components/SettingsNavigation/SettingsNavi
 
 
 
-const Settings = () => {
+const ThemePage = () => {
 
 
     return (
@@ -10,4 +10,4 @@ const Settings = () => {
     );
 };
 
-export default Settings;
+export default ThemePage;

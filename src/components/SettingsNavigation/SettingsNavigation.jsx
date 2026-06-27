@@ -8,7 +8,7 @@ import styles from "./styles.module.css"
 
 const SettingsNavigation = () => {
     const items = [
-    { icon: broomIcon, text: "Внешний вид", path: "/settings/theme" },
+    { icon: broomIcon, text: "Внешний вид", path: "/settings/themes" },
     { icon: thanksIcon, text: "Благодарности", path: "/settings/thanks" },
     { icon: bankIcon, text: "Условия и этика", path: "/settings/terms" },
     ];
@@ -20,7 +20,7 @@ const SettingsNavigation = () => {
                 <ul className={styles.Settings__list}>
                     {items.map((item, index) => (
                         <li className={styles.Settings__listItem} key={index}>
-                            <Link to={item.path}>
+                            <Link to={item.path} className={styles.link}>
                                 <img src={item.icon} />
                                 <span>{item.text}</span>
                             </Link>

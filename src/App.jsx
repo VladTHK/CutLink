@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header/Header"
 import Main from './pages/HomePage/Main'
-import Settings from './pages/SettingsPage/SettingsPage'
+import ThanksPage from './pages/SettingsPage/ThanksPage'
+import ThemePage from './pages/SettingsPage/ThemePage'
+import TermsPage from './pages/SettingsPage/TermsPage'
 import styles from './App.module.css'
 
 function App() {
-  // Определяем basename в зависимости от окружения
   const baseName = import.meta.env.PROD ? "/CutLink" : "/";
 
   return (
@@ -14,7 +15,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/settings/thanks" element={<ThanksPage />} />
+          <Route path="/settings/terms" element={<TermsPage />} />
+          <Route path="/settings/themes" element={<ThemePage />} />
         </Routes>
       </div>
     </BrowserRouter>

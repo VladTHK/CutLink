@@ -9,7 +9,6 @@ const Navigation = () => {
     const location = useLocation();
 
     const handleSettingsClick = () => {
-        // Если уже на странице настроек, вернёмся на главную
         if (location.pathname === '/settings') {
             window.location.href = '/';
         }
@@ -18,7 +17,7 @@ const Navigation = () => {
     return (
         <ul className={styles.navigation}>
             <li id="settings">
-                <Link title="Настройки" to="/settings" onClick={handleSettingsClick}>
+                <Link title="Настройки" to="/settings/themes" onClick={handleSettingsClick}>
                     <img src={cogIcon} alt="settings"/>
                 </Link>
             </li>
