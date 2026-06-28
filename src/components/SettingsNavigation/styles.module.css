@@ -26,11 +26,17 @@
 }
 
 .link {
-    color: #fff;
+    color: #808080;
     gap: 5px;
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+.active {
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 .Settings__listItem:hover {

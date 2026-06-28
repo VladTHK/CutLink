@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import broomIcon from "../../assets/img/broom-solid.svg";
 import thanksIcon from "../../assets/img/book-heart-solid.svg";
@@ -20,10 +20,13 @@ const SettingsNavigation = () => {
                 <ul className={styles.Settings__list}>
                     {items.map((item, index) => (
                         <li className={styles.Settings__listItem} key={index}>
-                            <Link to={item.path} className={styles.link}>
+                            <NavLink to={item.path} 
+                                className={({ isActive }) =>
+                                `${styles.link} ${isActive ? styles.active : ""}`
+                            }>  
                                 <img src={item.icon} />
                                 <span>{item.text}</span>
-                            </Link>
+                            </NavLink>
                         </li>
                     ))}
                 </ul>       
