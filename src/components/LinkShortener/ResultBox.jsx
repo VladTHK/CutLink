@@ -1,31 +1,30 @@
+import {useState} from 'react'
+
 import styles from './styles.module.css';
+import copyIcon from "../../assets/img/copy.svg"
+import checkIcon from "../../assets/img/check.svg"
 
 const ResultBox = ({ shortUrl }) => {
+    const [clicked, setClicked] = useState(false);
+
+    
+
     if (!shortUrl) return null;
 
     const handleCopy = () => {
         navigator.clipboard.writeText(shortUrl);
-        alert('✅ Ссылка скопирована!');
+        setClicked(true)
+        setTimeout(() => {
+            setClicked(false)
+        }, 400) 
+
     };
 
     return (
         <div className={styles.resultBox}>
-            <div className={styles.result}>
-                {shortUrl}
-                <button 
-                    onClick={handleCopy} 
-                    style={{
-                        marginLeft: '10px',
-                        padding: '5px 10px',
-                        cursor: 'pointer',
-                        backgroundColor: '#007bff',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '4px'
-                    }}
-                >
-                    📋 Копировать
-                </button>
+            <div className={`${styles.result} ${clicked ? styles.active : ""}`} onClick={handleCopy} >
+                <img src={!clicked ? copyIcon : checkIcon} alt="icon" />
+                {`${clicked ? "Скопировано " : shortUrl}`}
             </div>
         </div>
     );

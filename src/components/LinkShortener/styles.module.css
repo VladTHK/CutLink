@@ -45,20 +45,13 @@
     height: 42px;
     background: #ffffff;
     flex: 0 0 auto;
-    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     white-space: nowrap;
 }
 
 .linkShortener_button:hover {
     box-shadow: 0 2px 0px #181818;
     transform: scale(0.95);
-}
-
-.linkShortener_button:active {
-    background: var(--success-color);
-    color: var(--success-text-color);
-    text-shadow: 0 0 10px var(--success-text-color);
-    transform: scale(0.9);
 }
 
 .linkShortener_icon {
@@ -107,21 +100,43 @@
 }
 
 .resultBox {
+    position: absolute;
+    top: 10px;
     margin-top: 8px;
     width: 100%;
 }
 
 .result {
+    position: absolute;
+    top: 0;
+    right: 20px;
     padding: 10px 12px;
     border-radius: 5px;
-    border: 2px solid var(--success-color);
-    background: var(--success-color);
-    color: var(--success-text-color);
+    border: 2px dashed #303030;
+    background: #141414;
+    color: #505050;
     width: fit-content;
+    min-width: 200px;
     max-width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.result > img {
+    width: 24px;
 }
 
 .terms-note {
     position: absolute;
     bottom: 16px;
+}
+
+.active {
+    background: var(--success-color);
+    color: var(--success-text-color);
+    border: 2px solid var(--success-color);
+    transition: all 0.3s ease;
 }

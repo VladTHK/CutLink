@@ -67,26 +67,23 @@ const LinkShortener = () => {
 
     const handleShorten = async (url) => {
         setLoading(true);
-        setError('');
-        setShortUrl('');
+        setError("");
+        setShortUrl("");
 
         try {
-            // Проверка валидности URL
             new URL(url);
 
             const shortened = await shortenWithAPI(url);
-            
-            // Проверяем, что вернулось не HTML
-            if (shortened.includes('<!DOCTYPE') || shortened.includes('<html')) {
-                throw new Error('API вернул ошибку (HTML вместо ссылки)');
+
+            if (shortened.includes("<!DOCTYPE") || shortened.includes("<html")) {
+                throw new Error("API вернул ошибку (HTML вместо ссылки)");
             }
 
             setShortUrl(shortened);
-            console.log('✅ Ссылка сокращена:', shortened);
+            return true;
         } catch (err) {
-            const errorMsg = err.message || 'Не удалось сокращить ссылку. Попробуйте позже';
-            setError(errorMsg);
-            console.error('❌ Ошибка:', err);
+            setError(err.message || "Не удалось сокращить ссылку");
+            return false;
         } finally {
             setLoading(false);
         }
