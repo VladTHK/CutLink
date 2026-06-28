@@ -9,8 +9,7 @@
     height: 100vh;
     z-index: 1000;
     transition: background 0.3s ease;
-    background: #101010;
-    border-right: 1px solid #181818;
+    background: var(--header-color);
 }
 
 .header img {

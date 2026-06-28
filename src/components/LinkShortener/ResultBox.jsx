@@ -16,7 +16,7 @@ const ResultBox = ({ shortUrl }) => {
         setClicked(true)
         setTimeout(() => {
             setClicked(false)
-        }, 400) 
+        }, 1000) 
 
     };
 

@@ -10,16 +10,16 @@
 
 .termsNote p {
     font-size: 11px;
-    color: #383838;
+    color: var(--text-secondary);
     margin: 0;
     font-family: "Departure Mono";
 }
 
 .termsNote a {
-    color: #383838;
+    color: var(--text-secondary);
     transition: color 0.3s ease;
 }
 
 .termsNote a:hover {
-    color: #ffffff80;
+    color: var(--text);
 }

@@ -6,11 +6,13 @@
 }
 
 .title {
+    color: var(--text);
     text-align: center;
     margin: 10px;
 }
 
 .indent {
+    color: var(--text);
     margin-top: 10px;
 }
 
@@ -19,7 +21,7 @@
     font-size: 14px;
     width: 80%;
     text-wrap-mode: balance;
-    color: #808080;
+    color: var(--text-secondary);
 }
 
 .buttons {
@@ -31,15 +33,15 @@
 
 .button {
     cursor: pointer;
-    color: #808080;
+    color: var(--text-secondary);
     border: none;
-    border-bottom: 2px dotted #808080;
+    border-bottom: 2px dotted var(--border-color);
     background: none;
 }
 
 .active {
     border: none;
-    color: white;
+    color: var(--text);
 }
 
 

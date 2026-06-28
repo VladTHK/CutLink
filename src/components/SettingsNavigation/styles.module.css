@@ -1,8 +1,8 @@
 .Settings {
     text-wrap: nowrap;
     padding: 20px;
-    background-color: #070707;
-    border-right: 1px solid #101010;
+    background-color: var(--setting-color);
+    border-right: 1px solid var(--nav-border);
 }
 
 .Settings > span {
@@ -26,7 +26,7 @@
 }
 
 .link {
-    color: #808080;
+    color: var(--text-secondary);;
     gap: 5px;
     text-decoration: none;
     display: flex;
@@ -34,7 +34,7 @@
 }
 
 .active {
-    color: #ffffff;
+    color: var(--text-color);
     border-radius: 8px;
     font-weight: 600;
 }
@@ -42,7 +42,7 @@
 .Settings__listItem:hover {
     border-radius: 10px;
     cursor: pointer;
-    border: 2px solid #505050;
+    border: 2px solid var(--border-color);
 }
 
 .Settings__listItem img {

@@ -1,21 +1,17 @@
 .Thanks {
-    color: var(--text);
     padding: 20px 80px 80px 80px ;
     animation: fadeIn 0.3s ease;
 }
 
 .title {
-    color: var(--text);
     text-align: center;
 }
 
 .indent {
-    color: var(--text);
     text-indent: -10px;
 }
 
 .text {
-    color: var(--text);
     text-decoration: none;
 }
 
@@ -23,13 +19,13 @@
     border: 2px solid transparent;
     border-radius: 5px;
     padding: 2px;
-    color: var(--text-secondary);
+    color: #808080;
     text-decoration: none;
 }
 
 .Thanks > .text > a:hover {
-    color: var(--text-secondary);
-    border: 2px dashed var(--border-color);
+    color: #808080;
+    border: 2px dashed #808080;
     text-decoration: none;
 }
 
