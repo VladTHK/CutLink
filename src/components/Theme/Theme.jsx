@@ -45,6 +45,32 @@ const Theme = () => {
                 >
                     💻 Системная
                 </button>
+                <button
+                    className={`${styles.card} ${
+                        theme === "pink" ? styles.active : ""
+                    }`}
+                    onClick={() => setTheme("pink")}
+                >
+                    pink
+                </button>
+
+                <button
+                    className={`${styles.card} ${
+                        theme === "joker" ? styles.active : ""
+                    }`}
+                    onClick={() => setTheme("joker")}
+                >
+                    🌙 joker
+                </button>
+
+                <button
+                    className={`${styles.card} ${
+                        theme === "terminal" ? styles.active : ""
+                    }`}
+                    onClick={() => setTheme("terminal")}
+                >
+                    💻 terminal
+                </button>
             </div>
         </div>
     );
