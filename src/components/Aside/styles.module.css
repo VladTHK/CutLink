@@ -1,4 +1,4 @@
-.header {
+.aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     background: var(--header-color);
 }
 
-.header img {
+.aside img {
     height: 30px;
     width: 30px;
     transition: transform 0.3s ease;

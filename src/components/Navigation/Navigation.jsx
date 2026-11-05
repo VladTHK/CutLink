@@ -17,7 +17,7 @@ const Navigation = () => {
     return (
         <ul className={styles.navigation}>
             <li id="settings">
-                <Link title="Настройки" to="/settings/themes" onClick={handleSettingsClick}>
+                <Link title="Настройки" to="/settings/thanks" onClick={handleSettingsClick}>
                     <img src={cogIcon} alt="settings"/>
                 </Link>
             </li>
